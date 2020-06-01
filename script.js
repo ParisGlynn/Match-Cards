@@ -78,6 +78,7 @@ function flipCard(e) {
             <p>In ${minutesEl.innerText}:${secondsEl.innerText}</p>
             <button id = 'playBtn' class = 'playBtn'>Play Again?</button>
           `;
+          time.style.display = 'none';
           winWindow.style.display = 'flex';
           clearInterval(timer);
         }
