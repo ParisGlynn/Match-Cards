@@ -1,0 +1,146 @@
+/* Standard */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #3039b4;
+  overflow: hidden;
+}
+
+/* Container */
+
+.container {
+  position: relative;
+  max-width: 650px;
+  margin: 40px auto 0;
+  background-color: #c49c85;
+  padding: 15px;
+  height: 100vh;
+}
+
+.container h1 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.container .time {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  font-size: 24px;
+}
+
+.container p {
+  width: 500px;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+/* playing cards */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+}
+
+.cards .card {
+  position: relative;
+  width: 110px;
+  height: 110px;
+}
+
+.cards .card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: opacity .4s;
+}
+
+/* Winning window */
+
+.winWindow {
+  background-color: #555;
+  color: #fff;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.winWindow p {
+  width: 100%;
+}
+
+.playBtn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 0;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.playBtn:active {
+  transform: scale(0.95);
+}
+
+.playBtn:focus {
+  outline: none;
+}
+
+/* Media Queries */
+
+/* Mobile phone */
+
+@media (max-width: 400px) {
+  .container {
+    width: 330px;
+    height: 95vh;
+    margin: 20px auto 0;
+  }
+
+  .container h1 {
+    font-size: 24px;
+  }
+
+  .container p {
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .container .time {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 16px;
+  }
+
+  .cards .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .cards {
+    margin-top: 50px;
+  }
+}
